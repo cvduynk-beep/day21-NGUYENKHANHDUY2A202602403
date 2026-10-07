@@ -39,16 +39,16 @@
 | Trường | Phân tích của tôi |
 | --- | --- |
 | High-risk moment | Thời điểm thuật toán AI tự động chấm điểm sao (Ranking 1-5 sao) và lập danh sách lọc hồ sơ sơ tuyển chuyển cho nhà tuyển dụng. |
-| Stakeholder bị ảnh hưởng | Ứng viên nữ nộp hồ sơ vào các vị trí kỹ thuật tại Amazon (bị mất cơ hội phỏng vấn một cách bất công); Doanh nghiệp Amazon (tổn hại uy tín thương hiệu tuyển dụng và đối mặt với rủi ro vi phạm luật lao động bình đẳng). |
+| Stakeholder bị ảnh hưởng | **[Ứng viên nữ nộp hồ sơ kỹ thuật]** bị **[hạ điểm bất công và tước đoạt cơ hội phỏng vấn]** khi **[thuật toán AI tự động phạt điểm các từ khóa liên quan đến phụ nữ]**; **[Doanh nghiệp Amazon]** bị **[tổn hại danh tiếng thương hiệu và rủi ro pháp lý]** khi **[công cụ AI nội bộ phát sinh thiên kiến phân biệt đối xử]**. |
 | Failure mode | **Bias / fairness** (Thiên kiến thuật toán do học từ dữ liệu lịch sử mất cân bằng giới tính nghiêm trọng). |
 | Layer bắt đầu lỗi | **Grounding / Data layer** (Dữ liệu huấn luyện lịch sử 10 năm bị thiên lệch nam giới được nạp trực tiếp vào hệ thống mà không có cơ chế tiền xử lý và kiểm định tính đại diện công bằng). |
-| Harm xảy ra là gì? | Đã xảy ra trong môi trường thử nghiệm: hồ sơ của ứng viên nữ bị trừ điểm bất công; nguy cơ loại trừ hàng loạt nhân sự nữ có năng lực khỏi thị trường công nghệ nếu đưa vào vận hành thực tế. |
-| Harm lens | **Opportunity loss** (Mất cơ hội việc làm, thu nhập và phát triển nghề nghiệp) & **Dignity loss** (Tổn thương phẩm giá khi bị đánh giá thấp chỉ vì giới tính). |
+| Harm xảy ra là gì? | **Đã xảy ra trên thực tế thử nghiệm:** Hồ sơ ứng viên nữ bị trừ điểm bất công; **Nguy cơ tiềm ẩn:** Phân biệt đối xử có tính hệ thống trên quy mô hàng ngàn lao động nếu đưa vào vận hành chính thức. |
+| Harm lens | **Opportunity loss** (Mất cơ hội việc làm, thu nhập) & **Dignity loss** (Tổn thương phẩm giá khi bị đánh giá thấp vì giới tính). |
 | Severity | **High** (Tác động trực tiếp và nghiêm trọng tới quyền tiếp cận cơ hội việc làm công bằng của phụ nữ). |
-| Scale | Ảnh hưởng hàng ngàn ứng viên thử nghiệm trong giai đoạn 2014–2017; tiềm năng ảnh hưởng hàng trăm ngàn ứng viên nếu triển khai toàn cầu. |
-| Probability | **High** (Gần như 100% hồ sơ chứa các từ khóa gắn liền với phụ nữ trong tập dữ liệu thử nghiệm đều bị trừ điểm do cơ chế tối ưu hóa tương đồng của mô hình). |
-| Frequency | **High** (Xảy ra liên tục và tự động trên mọi chu kỳ quét hồ sơ ứng viên). |
-| Vì sao? | Thuật toán học máy (Machine Learning) được thiết kế để tìm ứng viên tương đồng với các nhân viên thành công trong quá khứ của công ty. Khi quá khứ bị chiếm lĩnh bởi nam giới, AI đã nhầm lẫn đặc tính giới tính nam là yếu tố quyết định năng lực kỹ thuật xuất sắc. |
+| Scale | **Lớn (High)** (Hàng ngàn ứng viên thử nghiệm tại Amazon trong giai đoạn 2014–2017; tiềm năng ảnh hưởng hàng trăm ngàn người nếu mở rộng). |
+| Probability | **Cao (High)** (Theo điều tra nội bộ, gần như 100% hồ sơ chứa từ khóa liên quan đến nữ giới trong tập thử nghiệm đều bị hạ điểm). |
+| Frequency | **Thường xuyên (High)** (Xảy ra tự động trên mọi lượt quét hồ sơ có đặc điểm liên quan đến nữ giới). |
+| Vì sao? | Căn cứ đánh giá: Severity ở mức High vì tước đoạt cơ hội kinh tế; Probability và Frequency ở mức High do mô hình ML học trực tiếp từ dữ liệu lịch sử 10 năm nam giới áp đảo (>60%–70%) và tự động tối ưu hóa việc tìm ứng viên tương đồng với quá khứ. Giới hạn bằng chứng: Amazon đã dừng dự án trước khi đưa vào sản xuất đại trà nên hậu quả ở quy mô thử nghiệm nội bộ. |
 
 ---
 
@@ -74,16 +74,16 @@
 | Trường | Phân tích của tôi |
 | --- | --- |
 | High-risk moment | Thời điểm hệ thống phân tích tín hiệu video phỏng vấn và xuất điểm xếp hạng Employability Score cho nhà tuyển dụng để quyết định cho qua hay loại ứng viên. |
-| Stakeholder bị ảnh hưởng | Ứng viên khuyết tật, người mắc chứng tự kỷ, người thuộc nhóm chủng tộc/văn hóa thiểu số (bị chấm điểm thấp oan uổng); Nhà tuyển dụng (đánh mất ứng viên tài năng và vướng vào bê bối đạo đức). |
+| Stakeholder bị ảnh hưởng | **[Ứng viên khuyết tật, người tự kỷ và người thuộc văn hóa thiểu số]** bị **[đánh giá thấp và loại khỏi quy trình tuyển dụng]** khi **[AI chấm điểm năng lực dựa trên phân tích nét mặt]**; **[Nhà tuyển dụng]** bị **[đánh mất nhân tài và vướng khiếu nại pháp lý]** khi **[phụ thuộc vào thuật toán ngụy khoa học]**. |
 | Failure mode | **Harmful advice / Over-reliance & Bias** (Cung cấp phán đoán sai lệch, phi khoa học về năng lực con người; nhà tuyển dụng tin tưởng mù quáng vào điểm số tự động). |
-| Layer bắt đầu lỗi | **Model Layer** (Giả định khoa học của mô hình sai lầm cơ bản khi xem chuyển động cơ mặt là thước đo năng lực lao động; thiếu hoàn toàn dữ liệu đại diện cho người khuyết tật và đa dạng thần kinh - neurodiversity). |
-| Harm xảy ra là gì? | Đã xảy ra trên thực tế: Hàng ngàn ứng viên bị loại khỏi quy trình tuyển dụng bởi thuật toán thiếu minh bạch và không có cơ sở khoa học đã được kiểm chứng độc lập. |
+| Layer bắt đầu lỗi | **Model Layer** (Giả định khoa học của mô hình sai lầm cơ bản khi xem chuyển động cơ mặt là thước đo năng lực lao động; thiếu dữ liệu đại diện cho người khuyết tật và đa dạng thần kinh - neurodiversity). |
+| Harm xảy ra là gì? | **Đã xảy ra trên thực tế:** Hàng ngàn ứng viên bị loại khỏi quy trình tuyển dụng bởi thuật toán thiếu minh bạch và không có cơ sở khoa học; **Nguy cơ tiềm ẩn:** Bình thường hóa việc phán xét con người qua diện mạo trong toàn ngành nhân sự. |
 | Harm lens | **Opportunity loss** (Mất cơ hội việc làm) & **Dignity loss** (Bị máy móc phán xét nhân cách và phẩm giá dựa trên đặc điểm thể chất bên ngoài). |
 | Severity | **High** (Tác động sâu rộng tới quyền bình đẳng tiếp cận việc làm của người khuyết tật và các nhóm thiểu số). |
-| Scale | Rất lớn (Triển khai trên hơn **19 triệu lượt phỏng vấn** của hơn **700 doanh nghiệp** trên toàn cầu). |
-| Probability | **High** (Rất cao đối với các ứng viên có khiếm khuyết vận động cơ mặt hoặc thuộc các nhóm văn hóa không có thói quen nhìn thẳng vào camera). |
-| Frequency | **High** (Xảy ra lặp đi lặp lại trên mọi video phỏng vấn được AI chấm điểm). |
-| Vì sao? | Mô hình sử dụng công nghệ nhận diện cảm xúc (Emotion AI) thiếu tính vững chắc và thiếu sự xác thực khoa học từ bên thứ ba, trong khi doanh nghiệp quảng bá như một thước đo khách quan khiến khách hàng phụ thuộc hoàn toàn vào kết quả chấm điểm. |
+| Scale | **Rất lớn (Very High)** (Triển khai trên hơn **19 triệu lượt phỏng vấn** của hơn **700 doanh nghiệp** trên toàn cầu). |
+| Probability | **Cao (High)** (Rất cao đối với các ứng viên có khiếm khuyết vận động cơ mặt hoặc thuộc các nhóm văn hóa không có thói quen nhìn thẳng vào camera). |
+| Frequency | **Thường xuyên (High)** (Xảy ra lặp đi lặp lại trên mọi video phỏng vấn được AI chấm điểm). |
+| Vì sao? | Căn cứ đánh giá: Severity và Scale ở mức rất lớn vì hơn 19 triệu cuộc phỏng vấn tại 700 công ty toàn cầu đã áp dụng; Probability và Frequency cao vì hệ thống chạy mặc định trên toàn bộ video nộp vào. Nguồn bằng chứng: Xác nhận qua 42 trang đơn khiếu nại của tổ chức EPIC gửi FTC và kiểm toán của ORCAA buộc HireVue phải xóa bỏ tính năng này năm 2021. |
 
 ---
 
@@ -109,16 +109,16 @@
 | Trường | Phân tích của tôi |
 | --- | --- |
 | High-risk moment | Thời điểm thuật toán Workday tự động quét hàng triệu hồ sơ ứng viên và đưa ra quyết định từ chối (Rejection) ngay lập tức mà không có sự thẩm định hay phê duyệt của con người. |
-| Stakeholder bị ảnh hưởng | Ứng viên lao động thuộc nhóm người da màu, người lao động lớn tuổi (>40 tuổi) và người có tiền sử bệnh lý/khuyết tật; Các tập đoàn sử dụng Workday đối mặt với nguy cơ bị kiện tụng liên đới. |
+| Stakeholder bị ảnh hưởng | **[Ứng viên da màu, người lao động trên 40 tuổi và người khuyết tật]** bị **[từ chối việc làm tự động hàng loạt không rõ nguyên nhân]** khi **[thuật toán Workday loại hồ sơ qua các biến số gián tiếp mà không có con người giám sát]**; **[Doanh nghiệp khách hàng của Workday]** bị **[liên đới trách nhiệm pháp lý trong vụ kiện phân biệt đối xử tập thể]** khi **[triển khai công cụ AI sàng lọc thiếu kiểm toán độc lập]**. |
 | Failure mode | **Bias / fairness & Escalation failure** (Thiên kiến cấu trúc theo tuổi tác, chủng tộc, bệnh lý và không có kênh khiếu nại hay chuyển giao cho con người can thiệp khi bị loại tự động). |
 | Layer bắt đầu lỗi | **Grounding & Model Layer** (Mô hình sử dụng các biến số gián tiếp - proxies như năm tốt nghiệp đại học, địa điểm, khoảng thời gian ngắt quãng trong CV để gán nhãn loại trừ ứng viên). |
-| Harm xảy ra là gì? | Đã xảy ra: Hơn 100 lần từ chối việc làm bất công đối với cá nhân nguyên đơn và hàng ngàn ứng viên tiềm năng khác; nguy cơ tạo ra rào cản ngăn chặn sự đa dạng và hòa nhập xã hội. |
+| Harm xảy ra là gì? | **Đã xảy ra trên thực tế:** Hơn 100 lần từ chối việc làm bất công đối với cá nhân nguyên đơn và hàng ngàn ứng viên tiềm năng khác; **Nguy cơ tiềm ẩn:** Tạo rào cản ngăn chặn sự đa dạng và hòa nhập xã hội một cách vô hình. |
 | Harm lens | **Opportunity loss** (Tước đoạt cơ hội việc làm, mất thu nhập sinh kế) & **Dignity loss** (Cảm giác bất lực khi đối mặt với hệ thống từ chối hộp đen không thể phản hồi). |
 | Severity | **High** (Tác động trực tiếp đến quyền mưu sinh hợp pháp và quyền bình đẳng lao động theo hiến pháp và pháp luật). |
-| Scale | Rất lớn (Workday là nền tảng quản trị nhân sự hàng đầu thế giới, xử lý hàng chục triệu hồ sơ tuyển dụng mỗi năm cho hàng ngàn khách hàng doanh nghiệp). |
-| Probability | **High** (Tỷ lệ bị từ chối tự động đối với các hồ sơ có đặc điểm tương tự nguyên đơn là cực kỳ cao). |
-| Frequency | **High** (Hệ thống chạy tự động liên tục 24/7 trên toàn bộ các cổng tuyển dụng của khách hàng). |
-| Vì sao? | Thuật toán hoạt động như một "hộp đen" (Black box), thiếu hoàn toàn cơ chế giải trình (Explainability), không có sự giám sát thực chất của con người (Human-in-the-loop) và thiếu các bài kiểm tra tác động bất bình đẳng độc lập định kỳ. |
+| Scale | **Rất lớn (Very High)** (Hệ thống Workday quản trị hàng chục triệu hồ sơ tuyển dụng mỗi năm cho hàng ngàn tập đoàn lớn trên toàn cầu). |
+| Probability | **Cao (High)** (Tỷ lệ bị từ chối tự động đối với các hồ sơ có đặc điểm nhân khẩu học tương tự nguyên đơn là cực kỳ cao, trên 100/100 vị trí). |
+| Frequency | **Thường xuyên (High)** (Hệ thống chạy tự động liên tục 24/7 trên toàn bộ các cổng tuyển dụng của khách hàng). |
+| Vì sao? | Căn cứ đánh giá: Severity và Scale ở mức rất lớn vì Workday là nền tảng quản trị nhân sự hàng đầu thế giới; Probability và Frequency cao vì hệ thống hoạt động khép kín theo cơ chế hộp đen (Black box), loại tự động trước khi tới tay con người. Nguồn bằng chứng: Phán quyết dài 30 trang của Tòa án Liên bang Mỹ (U.S. District Court, 12/07/2024) khẳng định nhà cung cấp phần mềm AI tuyển dụng phải chịu trách nhiệm như đại lý việc làm. |
 
 ---
 
