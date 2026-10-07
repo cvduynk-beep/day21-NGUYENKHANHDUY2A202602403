@@ -1,0 +1,6 @@
+# Ignore large screen recording video files
+*.mov
+*.mp4
+*.avi
+.DS_Store
+scratch/
